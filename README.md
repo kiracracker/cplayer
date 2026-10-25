@@ -54,56 +54,47 @@ libcurl	Networking
 CMake	Build system
 MinGW-w64	Windows toolchain
 
-Building from Source
+## Building from Source
 
-Prerequisites
+### Prerequisites
 
-* Windows
-* MSYS2
-* MinGW-w64 GCC/G++
-* CMake
-* The dependencies required by the project
+- Windows
+- [MSYS2](https://www.msys2.org/)
+- MinGW-w64
+- [CMake](https://cmake.org/)
 
-1. Clone the repository
+### 1. Clone the repository
 
+```bash
 git clone https://github.com/kiracracker/cplayer.git
 cd cplayer
+```
 
-2. Install dependencies
+### 2. Configure the project
 
-Open the MSYS2 MinGW64 terminal and install the available system libraries:
-
-pacman -S --needed \
-  mingw-w64-x86_64-curl \
-  mingw-w64-x86_64-brotli \
-  mingw-w64-x86_64-zlib \
-  mingw-w64-x86_64-libpng \
-  mingw-w64-x86_64-freetype
-
-3. Configure the project
-
+```bash
 cmake -S . -B build -G "MinGW Makefiles"
+```
 
-4. Build
+### 3. Build
 
+```bash
 cmake --build build --parallel
+```
 
-The executable should be generated in the build directory if configuration and linking complete successfully.
+## Project Structure
 
-Note: The current build configuration references C:/msys64/mingw64/ and includes prebuilt libraries. You may need to adjust dependency paths and library configuration for your environment.
-
-Project Structure
-
+```text
 cplayer/
-├── fonts/          # Font assets
-├── icons/          # Icons and UI assets
-├── include/        # Headers
-├── lib/            # Prebuilt libraries
-├── src/            # C++ source files
-├── CMakeLists.txt  # Build configuration
-├── app_icon.ico    # Application icon
-├── favicon.rc      # Windows resources
+├── fonts/
+├── icons/
+├── include/
+├── lib/
+├── src/
+├── CMakeLists.txt
+├── favicon.rc
 └── README.md
+```
 
 Development Status
 
