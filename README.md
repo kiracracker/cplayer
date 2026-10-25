@@ -1,92 +1,124 @@
 cplayer
 
-A lightweight desktop music player built with C++17, focused on music playback, metadata, and a clean graphical interface.
+A native desktop music player built with C++17.
+
+A personal music player project exploring native Windows development, multimedia libraries, audio metadata, and text rendering.
+
+<p align="center">
+  <img src="screenshots/main-window.png" alt="cplayer main window" width="800">
+</p>
+<p align="center">
+  <em>A work in progress.</em>
+</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/C%2B%2B-17-blue?logo=cplusplus" alt="C++17">
+  <img src="https://img.shields.io/badge/Platform-Windows-0078D4?logo=windows" alt="Windows">
+  <img src="https://img.shields.io/badge/Build-CMake-064F8C?logo=cmake" alt="CMake">
+  <img src="https://img.shields.io/badge/Compiler-MinGW--w64-555555" alt="MinGW-w64">
+</p>
 
 Overview
 
-cplayer is a personal music player project developed in C++ for Windows. It uses raylib for graphics and integrates several libraries for audio-related functionality, font rendering, and music metadata handling.
+cplayer is a desktop music player written in C++17. The project brings together graphics, audio metadata, and text-rendering technologies to build a native Windows application.
 
-The project is also an opportunity to explore native desktop application development, multimedia libraries, and UI design in C++.
+It is also a hands-on exploration of C++ application development, library integration, and building a custom desktop interface.
 
 Features
 
-* Music metadata — Read audio tags using TagLib.
-* Album artwork — Support for handling embedded cover art.
-* Graphical interface — A desktop UI built with raylib.
-* Text rendering — Font rendering support using FreeType, HarfBuzz, and SDL2_ttf.
-* Unicode support — Designed with international text rendering in mind, including Arabic.
-* Native Windows application — Built using CMake and MinGW-w64.
+* Desktop interface — Graphics powered by raylib.
+* Audio metadata — Metadata handling through TagLib.
+* Album artwork — Support for working with embedded cover art.
+* Text rendering — Integration with FreeType, HarfBuzz, and SDL2_ttf.
+* International text — Text-rendering technologies suitable for multilingual interfaces.
+* Native build — CMake-based build system targeting Windows with MinGW-w64.
 
-Features and implementation details may change as development continues.
+cplayer is under active development. Features and implementation details may change.
+
+Screenshots
+
+<!-- Add screenshots of the actual application below. -->
+
+Main Window	Music Library
+	
 
 Built With
 
-Technology	Purpose
-C++17	Core application
-raylib	Graphics and UI
+Technology	Role
+C++17	Application development
+raylib	Graphics
 TagLib	Audio metadata
 SDL2_ttf	Font rendering
 FreeType	Font engine
 HarfBuzz	Text shaping
 libcurl	Networking
-CMake	Build configuration
-MinGW-w64	Windows compilation toolchain
-
-Requirements
-
-To build cplayer from source, you will need:
-
-* Windows
-* MSYS2 with the MinGW-w64 toolchain
-* GCC / G++
-* CMake
-* The project’s required libraries and development headers
-
-The current build configuration uses the MSYS2 mingw64 environment and includes some prebuilt libraries in the repository.
+CMake	Build system
+MinGW-w64	Windows toolchain
 
 Building from Source
+
+Prerequisites
+
+* Windows
+* MSYS2
+* MinGW-w64 GCC/G++
+* CMake
+* The dependencies required by the project
 
 1. Clone the repository
 
 git clone https://github.com/kiracracker/cplayer.git
 cd cplayer
 
-2. Configure the project
+2. Install dependencies
 
-Open the MSYS2 MinGW64 terminal and run:
+Open the MSYS2 MinGW64 terminal and install the available system libraries:
+
+pacman -S --needed \
+  mingw-w64-x86_64-curl \
+  mingw-w64-x86_64-brotli \
+  mingw-w64-x86_64-zlib \
+  mingw-w64-x86_64-libpng \
+  mingw-w64-x86_64-freetype
+
+3. Configure the project
 
 cmake -S . -B build -G "MinGW Makefiles"
 
-3. Build
+4. Build
 
 cmake --build build --parallel
 
-If the build succeeds, the executable will be generated in the build directory.
+The executable should be generated in the build directory if configuration and linking complete successfully.
 
-Note: The current CMake configuration references libraries under C:/msys64/mingw64/. If MSYS2 is installed elsewhere, or if required dependencies are missing, you may need to adjust the build configuration.
+Note: The current build configuration references C:/msys64/mingw64/ and includes prebuilt libraries. You may need to adjust dependency paths and library configuration for your environment.
 
 Project Structure
 
 cplayer/
 ├── fonts/          # Font assets
-├── icons/          # Application icons and UI assets
-├── include/        # Headers and library headers
+├── icons/          # Icons and UI assets
+├── include/        # Headers
 ├── lib/            # Prebuilt libraries
-├── src/            # Application source code
-├── CMakeLists.txt  # CMake build configuration
-├── favicon.rc      # Windows resource configuration
+├── src/            # C++ source files
+├── CMakeLists.txt  # Build configuration
+├── app_icon.ico    # Application icon
+├── favicon.rc      # Windows resources
 └── README.md
 
 Development Status
 
-cplayer is an ongoing personal project. Its features, interface, and internal architecture may evolve during development.
+cplayer is a personal project under development. The codebase and interface may evolve as new ideas are explored and the application grows.
 
-Contributions, suggestions, and bug reports are welcome.
+Contributing
+
+Suggestions, bug reports, and ideas are welcome. Feel free to open an issue to discuss a bug or a potential improvement.
 
 License
 
-No license has been specified yet. Please check this repository for licensing information before redistributing or modifying the project.
+No license information is currently specified in this README. Check the repository for an applicable license before redistributing the project.
 
 ⸻
 
-Developed by kiracracker.
+<p align="center">
+  Made by <a href="https://github.com/kiracracker">kiracracker</a>
+</p>
