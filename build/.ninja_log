@@ -1,0 +1,7 @@
+# ninja log v7
+11	54	8072139717475175	CMakeFiles/mp3player.dir/favicon.rc.obj	ffc987766de46128
+3	79	8072139717396729	CMakeFiles/mp3player.dir/src/main.cpp.obj	eceeb6a75a508393
+9	81	8072139717455175	CMakeFiles/mp3player.dir/src/utils.cpp.obj	35325d5b0f2d3694
+5	296	8072139717421753	CMakeFiles/mp3player.dir/src/cover.cpp.obj	797084e6996f1e21
+7	2525	8072139717439744	CMakeFiles/mp3player.dir/src/ui.cpp.obj	bba4c7136756115a
+2527	3144	8072139742626871	mp3player.exe	43c917d5f262a5b7
