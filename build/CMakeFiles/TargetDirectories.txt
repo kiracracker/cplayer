@@ -1,3 +1,0 @@
-C:/Users/Q_1c/Desktop/mp3player/build/CMakeFiles/mp3player.dir
-C:/Users/Q_1c/Desktop/mp3player/build/CMakeFiles/edit_cache.dir
-C:/Users/Q_1c/Desktop/mp3player/build/CMakeFiles/rebuild_cache.dir
